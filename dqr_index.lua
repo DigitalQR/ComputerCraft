@@ -15,5 +15,11 @@ end
 syncList = {}
 syncCounter = 0
 
+syncList[syncCounter++] = "DQR/inv.lua"
+
+for i=0,syncCounter do
+    DownloadFile(syncList[i])
+end
+
 print("Attempting to resync library")
 print("Finished syncing")
