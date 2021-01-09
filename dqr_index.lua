@@ -1,7 +1,6 @@
 -- Download and run index.lua, which will download the rest of the repro
-syncOrigin = "https://raw.githubusercontent.com/DigitalQR/ComputerCraft/main/"
-
 function DownloadFile(path)
+    local syncOrigin = "https://raw.githubusercontent.com/DigitalQR/ComputerCraft/main/"
     local url = syncOrigin .. path
     print("  Downloading '" .. url .."' to '" .. path .. "'")
 
@@ -15,7 +14,8 @@ end
 syncList = {}
 syncCounter = 0
 
-syncList[syncCounter++] = "DQR/inv.lua"
+syncList[syncCounter] = "DQR/inv.lua"
+syncCounter = syncCounter + 1
 
 for i=0,syncCounter do
     DownloadFile(syncList[i])
