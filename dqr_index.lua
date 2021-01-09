@@ -12,4 +12,8 @@ function DownloadFile(path)
     write("  Done.")
 end
 
-DownloadFile("dqr_index.lua");
+syncList = {}
+syncCounter = 0
+
+print("Attempting to resync library")
+print("Finished syncing")
